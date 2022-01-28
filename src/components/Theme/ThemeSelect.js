@@ -4,7 +4,7 @@ import { useResume } from '../../Context';
 import ThemeOption from './ThemeOption'
 
 const ThemeSelect = () => {
-    const options = ['purple.400', 'green.400', 'cyan.400', 'gray.400', 'red.400', 'orange.400']
+    const options = ['purple.400', 'green.400', 'cyan.400', 'gray.400', 'red.400', 'orange.400','#F15BA6']
 
     const { theme, setTheme } = useResume();
 
