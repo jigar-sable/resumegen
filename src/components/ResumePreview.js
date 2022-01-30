@@ -18,7 +18,13 @@ import { BiLinkExternal } from "react-icons/bi";
 const ResumePreview = () => {
   const { theme, about, educationList, skills, workList, projects, printElem } =
     useResume();
-
+    const imgStyle = {
+      width:"120px",
+      height:"120px",
+      padding: "1rem",
+      borderRadius: "50%",
+     
+    };
   return (
     <>
       <Box
@@ -33,8 +39,8 @@ const ResumePreview = () => {
           <HStack>
             {about.picture && (
               <img
-                style={{ padding: "1rem" }}
-                width="120px"
+                style={imgStyle}
+                
                 src={about.picture}
                 alt="avatar"
               />

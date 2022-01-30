@@ -18,7 +18,7 @@ function ImageUpload() {
       className="files-dropzone"
       onChange={onFilesChange}
       onError={onFilesError}
-      accepts={["image/png"]}
+      accepts={["image/png", "image/jpeg"]}
       maxFileSize={10000000}
       minFileSize={0}
       clickable
