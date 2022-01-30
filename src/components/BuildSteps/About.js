@@ -1,4 +1,11 @@
-import { FormControl, FormLabel, HStack, Input, Stack } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  HStack,
+  Input,
+  Stack,
+  Button,
+} from "@chakra-ui/react";
 import React from "react";
 import { useResume } from "../../Context";
 import ImageUpload from "../ImageUploadButton/ImageUpload.component";
@@ -14,7 +21,20 @@ const About = () => {
   return (
     <>
       <Stack spacing={4} mb={2}>
-        <ImageUpload />
+        {about.picture ? (
+          <Button
+            onClick={() => {
+              setAbout({ ...about, picture: "" });
+            }}
+            colorScheme="red"
+            variant="outline"
+          >
+            Remove Image
+          </Button>
+        ) : (
+          <ImageUpload />
+        )}
+
         <HStack spacing={6}>
           <FormControl>
             <FormLabel htmlFor="name">Full Name</FormLabel>
