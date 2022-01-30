@@ -1,7 +1,7 @@
 import { FormControl, FormLabel, HStack, Input, Stack } from "@chakra-ui/react";
 import React from "react";
 import { useResume } from "../../Context";
-import Files from "react-files";
+import ImageUpload from "../ImageUploadButton/ImageUpload.component";
 
 const About = () => {
   const { about, setAbout } = useResume();
@@ -11,31 +11,11 @@ const About = () => {
     setAbout({ ...about, [name]: value });
   };
 
-  const onFilesChange = (files) => {
-    console.log(files[0].preview.url);
-    setAbout({ ...about, picture: files[0].preview.url });
-  };
-
-  const onFilesError = (error, file) => {
-    console.log("error code " + error.code + ": " + error.message);
-  };
-
   return (
     <>
       <Stack spacing={4} mb={2}>
+        <ImageUpload />
         <HStack spacing={6}>
-          <Files
-            className="files-dropzone"
-            onChange={onFilesChange}
-            onError={onFilesError}
-            accepts={["image/png"]}
-            maxFileSize={10000000}
-            minFileSize={0}
-            clickable
-          >
-            Upload Image
-          </Files>
-
           <FormControl>
             <FormLabel htmlFor="name">Full Name</FormLabel>
             <Input
