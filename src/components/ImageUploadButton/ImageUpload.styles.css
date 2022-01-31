@@ -1,0 +1,21 @@
+.files-dropzone{
+  display: flex;
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: Poppins;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #6B46C0;
+  color: #6B46C0;
+}
+
+.files-dropzone:hover{
+  background-color: #6B46C0;
+  color: white;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+}

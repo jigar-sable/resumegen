@@ -19,6 +19,7 @@ export const ResumeProvider = ({ children }) => {
         phone: "",
         address: "",
         linkedin: "",
+        picture:"",
     });
 
     const [educationList, setEducationList] = useState([
