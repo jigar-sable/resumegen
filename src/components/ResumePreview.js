@@ -19,9 +19,11 @@ const ResumePreview = () => {
   const { theme, about, educationList, skills, workList, projects, printElem } =
     useResume();
     const imgStyle = {
-      width:"120px",
-      height:"120px",
-      padding: "1rem",
+      width:"115px",
+      height:"115px",
+     
+      margin:"15px",
+
       borderRadius: "50%",
      
     };
